@@ -1,5 +1,5 @@
 const COUNT_PHOTO = 25;
-const COUNT_AVATAR = 5;
+const COUNT_AVATAR = 6;
 const COUNT_LIKE_MIN = 15;
 const COUNT_LIKE_MAX = 200;
 const COUNT_COMMENTS = 10;
@@ -55,12 +55,12 @@ const createIdGenerator = () => {
   };
 };
 
-const generateCommentId = createIdGenerator();
-
 const createMessage = () => Array.from(
   { length: getRandomInteger(1, 2) },
   () => getRandomArrayElement(MESSAGE),
-).join('');
+).join(' ');
+
+const generateCommentId = createIdGenerator();
 
 const createComment = () => ({
   id: generateCommentId(),
